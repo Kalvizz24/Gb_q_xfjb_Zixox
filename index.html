@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Audio en arrière-plan -->
-    <audio id="background-music" src="jtmclara.mp3" autoplay loop></audio>
+   <audio id="background-music" src="jtmclara.mp3" controls autoplay loop></audio>
 
     <!-- En-tête -->
     <header>
@@ -53,5 +53,33 @@
     <footer>
         <p>&copy; 2024 Oasis de Inspiration. Tous droits réservés.</p>
     </footer>
+    <script>
+    // Vérifie si le rafraîchissement automatique a déjà eu lieu
+    if (!sessionStorage.getItem('refreshed')) {
+        // Marque comme ayant été rafraîchi pour éviter de boucler
+        sessionStorage.setItem('refreshed', 'true');
+        // Rafraîchit la page
+        window.location.reload();
+    } else {
+        // Réinitialise le marqueur pour les futures visites
+        sessionStorage.removeItem('refreshed');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('background-music');
+        
+        // Écoute l'événement 'canplaythrough' pour s'assurer que le fichier est prêt
+        audio.addEventListener('canplaythrough', function() {
+            // Le fichier est prêt à être joué en entier
+            console.log('Le fichier audio est prêt à être joué.');
+        }, false);
+        
+        // Écoute l'événement 'error' pour détecter les problèmes de chargement
+        audio.addEventListener('error', function() {
+            console.error('Erreur de chargement du fichier audio.');
+        }, false);
+    });
+</script>
+
+
 </body>
 </html>
