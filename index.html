@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis de Inspiration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Oasis de Inspiration</h1>
+        <nav>
+            <ul>
+                <li><a href="#inspirantes">Citations Inspirantes</a></li>
+                <li><a href="#romantiques">Citations Romantiques</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section principale -->
+    <main>
+        <section id="inspirantes">
+            <h2>Citations Inspirantes</h2>
+            <div class="quote">
+                <p>"Je vis chaque jour comme le dernier, car demain n'existe pas."</p>
+                <cite>- Oxmo Puccino, L'enfant seul (1998)</cite>
+            </div>
+            <div class="quote">
+                <p>"On n'est pas condamnés à l'échec, on est des combattants."</p>
+                <cite>- Kery James, Banlieusards (2008)</cite>
+            </div>
+            <div class="quote">
+                <p>"L'avenir appartient à ceux qui croient à la beauté de leurs rêves."</p>
+                <cite>- Eleanor Roosevelt</cite>
+            </div>
+            <!-- Ajoute d'autres citations inspirantes ici -->
+        </section>
+
+        <section id="romantiques">
+            <h2>Citations Romantiques</h2>
+            <div class="quote">
+                <p>"J'sais pas si j'vais t'aimer toute la vie, mais la nuit oui."</p>
+                <cite>- Orelsan, La pluie (2017)</cite>
+            </div>
+            <div class="quote">
+                <p>"T'es belle comme un secret que je garde dans mes pensées."</p>
+                <cite>- Lomepal, Trop beau (2018)</cite>
+            </div>
+            <!-- Ajoute d'autres citations romantiques ici -->
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Oasis de Inspiration. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Particles.js -->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 2,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
